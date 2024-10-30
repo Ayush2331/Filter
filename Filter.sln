@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterAPI", "FilterAPI\FilterAPI.csproj", "{05278A00-BC53-48D0-849B-E4F6E64B4314}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05278A00-BC53-48D0-849B-E4F6E64B4314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05278A00-BC53-48D0-849B-E4F6E64B4314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05278A00-BC53-48D0-849B-E4F6E64B4314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05278A00-BC53-48D0-849B-E4F6E64B4314}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD23881C-DDDA-48AC-A1FD-7F7F0A6E1DED}
+	EndGlobalSection
+EndGlobal
