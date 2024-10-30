@@ -10,7 +10,7 @@ namespace FilterAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class FilterController : ControllerBase
     {
         private readonly IFilterRepository _filterRepository;
@@ -20,7 +20,7 @@ namespace FilterAPI.Controllers
             this._filterRepository = filterRepository;
         }
 
-        [HttpPost("filter")]
+        [HttpPost]
         public async Task<ActionResult<PaginatedFilteredResponse>> GetFilteredProductDetails(
             [FromBody] FilterRequest filterRequest
         )

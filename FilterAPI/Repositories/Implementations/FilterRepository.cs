@@ -14,10 +14,14 @@ namespace FilterAPI.Repositories.Implementations
     public class FilterRepository : IFilterRepository
     {
         private readonly FilterDbContext _dbContext;
-        private readonly ILogger _logger;
+        private readonly ILogger<FilterRepository> _logger;
         private readonly IMapper _mapper;
 
-        public FilterRepository(FilterDbContext dbContext, ILogger logger, IMapper mapper)
+        public FilterRepository(
+            FilterDbContext dbContext,
+            ILogger<FilterRepository> logger,
+            IMapper mapper
+        )
         {
             this._dbContext = dbContext;
             this._logger = logger;

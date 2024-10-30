@@ -7,8 +7,8 @@
         public List<int>? StocksPurchased { get; set; } = null;
         public DateOnly? MfgStartDate { get; set; } = null;
         public DateOnly? MfgEndDate { get; set; } = null;
-        public SortRequest? SortRequest { get; set; }
-        public PaginationRequest? PaginationRequest { get; set; }
+        public SortRequest? SortRequest { get; set; } = null;
+        public PaginationRequest? PaginationRequest { get; set; } = null;
     }
 
     public class SortRequest
