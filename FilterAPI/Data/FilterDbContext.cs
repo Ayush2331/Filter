@@ -9,5 +9,6 @@ namespace FilterAPI.Data
             : base(dbContextOptions) { }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<SearchHistory> SearchHistory { get; set; }
     }
 }

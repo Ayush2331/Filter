@@ -2,18 +2,18 @@
 {
     public class FilterRequest
     {
-        public List<string>? Name { get; set; }
-        public List<string>? Type { get; set; }
-        public List<int>? StockQuantity { get; set; }
-        public DateOnly? MfgStartDate { get; set; }
-        public DateOnly? MfgEndDate { get; set; }
+        public List<string>? Name { get; set; } = null;
+        public List<string>? Type { get; set; } = null;
+        public List<int>? StocksPurchased { get; set; } = null;
+        public DateOnly? MfgStartDate { get; set; } = null;
+        public DateOnly? MfgEndDate { get; set; } = null;
         public SortRequest? SortRequest { get; set; }
         public PaginationRequest? PaginationRequest { get; set; }
     }
 
     public class SortRequest
     {
-        public bool? IsRelevantAscending { get; set; }
+        public bool? IsRelevant { get; set; }
         public bool? IsDateAscending { get; set; }
         public bool? IsPopularAscending { get; set; }
     }

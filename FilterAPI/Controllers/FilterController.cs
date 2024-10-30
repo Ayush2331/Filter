@@ -1,5 +1,6 @@
 ﻿using FilterAPI.Models.Domain;
 using FilterAPI.Models.Requests;
+using FilterAPI.Models.Responses;
 using FilterAPI.Repositories.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -9,7 +10,7 @@ namespace FilterAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class FilterController : ControllerBase
     {
         private readonly IFilterRepository _filterRepository;
@@ -20,7 +21,7 @@ namespace FilterAPI.Controllers
         }
 
         [HttpPost("filter")]
-        public async Task<ActionResult<Product>> GetFilteredProductDetails(
+        public async Task<ActionResult<PaginatedFilteredResponse>> GetFilteredProductDetails(
             [FromBody] FilterRequest filterRequest
         )
         {

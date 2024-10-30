@@ -1,4 +1,6 @@
 using FilterAPI.Data;
+using FilterAPI.Mapping_Profiles;
+using FilterAPI.Middlewares;
 using FilterAPI.Repositories.Abstractions;
 using FilterAPI.Repositories.Implementations;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -82,10 +84,12 @@ builder.Services.AddDbContext<AuthDbContext>(
 builder.Services.AddScoped<IFilterRepository, FilterRepository>();
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
+
 builder.Services
     .AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
-    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("NZWalks")
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("FilterAPI")
     .AddEntityFrameworkStores<AuthDbContext>()
     .AddDefaultTokenProviders();
 
@@ -125,7 +129,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
