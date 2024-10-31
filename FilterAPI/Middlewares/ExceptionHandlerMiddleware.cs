@@ -27,10 +27,11 @@ namespace FilterAPI.Middlewares
             {
                 var errorId = Guid.NewGuid();
 
-                // Log This Exception
                 logger.LogError(ex, $"{errorId} : {ex.Message}");
 
-                // Return A Custom Exrror Response
+                // Send email notification to Administrators using mail service(pseudo code)
+                // await _emailService.SendErrorEmail(ex, context.Request);
+
                 httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 httpContext.Response.ContentType = "application/json";
 
