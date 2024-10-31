@@ -29,7 +29,7 @@ namespace FilterAPI.Middlewares
 
                 logger.LogError(ex, $"{errorId} : {ex.Message}");
 
-                // Send email notification to Administrators using mail service(pseudo code)
+                // Send email notification to Administrators using mail service
                 // await _emailService.SendErrorEmail(ex, context.Request);
 
                 httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
